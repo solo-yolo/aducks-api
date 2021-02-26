@@ -9,10 +9,10 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
-        loggerLevel: full
+        loggerLevel: basic
 logging:
   level:
-    io.github.soloyolo.clients.battlenet.OAuthClient: DEBUG
+    io.github.soloyolo.clients.battlenet.OAuthClient: INFO
 
 clients:
   battlenet-oauth:
