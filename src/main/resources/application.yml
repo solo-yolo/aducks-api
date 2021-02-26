@@ -10,13 +10,21 @@ feign:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: basic
+      battlenet-client:
+        loggerLevel: full
 logging:
   level:
     io.github.soloyolo.clients.battlenet.OAuthClient: INFO
+    io.github.soloyolo.clients.battlenet.BattlenetClient: DEBUG
 
 clients:
   battlenet-oauth:
     url: https://eu.battle.net/oauth
     clientId: ${BATTLENET_OAUTH_CLIENT_ID}
     clientSecret: ${BATTLENET_OAUTH_CLIENT_SECRET}
+  battlenet-client:
+    url: https://eu.api.blizzard.com
 
+config:
+  realm: 'howling-fjord'
+  guild-name: 'аутята'
