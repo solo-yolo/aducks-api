@@ -13,9 +13,7 @@ import org.springframework.context.annotation.Bean;
 public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args)
-                .getBean(BattlenetClient.class)
-                .getGuildInfo("howling-fjord", "аутята", "profile-eu");
+        SpringApplication.run(App.class, args);
     }
 
     @Bean
