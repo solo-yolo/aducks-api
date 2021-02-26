@@ -1,8 +1,10 @@
 package io.github.soloyolo.dto;
 
-import lombok.Value;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Value
+@Data
+@NoArgsConstructor
 public class GuildInfo {
 
     String name;
@@ -12,5 +14,7 @@ public class GuildInfo {
     int memberCount;
     int achievementPoints;
     long created;
+
+    Crest crest;
 
 }

@@ -3,10 +3,8 @@ package io.github.soloyolo.clients.battlenet.payloads;
 import lombok.Data;
 
 @Data
-public class Color {
+public class Asset {
 
-    int id;
-    Rgba rgba;
-
+    String key;
+    String value;
 }
-

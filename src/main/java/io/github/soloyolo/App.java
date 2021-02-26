@@ -1,6 +1,7 @@
 package io.github.soloyolo;
 
 import io.github.soloyolo.clients.battlenet.BattlenetClient;
+import io.github.soloyolo.clients.battlenet.MediaClient;
 import io.github.soloyolo.service.GuildDataService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -17,10 +18,10 @@ public class App {
     }
 
     @Bean
-    GuildDataService guildDataService(BattlenetClient battlenetClient,
+    GuildDataService guildDataService(BattlenetClient battlenetClient, MediaClient mediaClient,
             @Value("${config.guild-name}") String guildName,
             @Value("${config.realm}") String realmSlug) {
-        return new GuildDataService(battlenetClient, guildName, realmSlug);
+        return new GuildDataService(battlenetClient, mediaClient, guildName, realmSlug);
     }
 
 }

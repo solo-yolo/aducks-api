@@ -1,12 +1,11 @@
 package io.github.soloyolo.clients.battlenet.payloads;
 
+import java.util.List;
 import lombok.Data;
 
 @Data
-public class Color {
+public class MediaResponse {
 
     int id;
-    Rgba rgba;
-
+    List<Asset> assets;
 }
-

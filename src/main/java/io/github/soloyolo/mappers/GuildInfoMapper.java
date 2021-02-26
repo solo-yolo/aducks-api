@@ -14,6 +14,7 @@ public interface GuildInfoMapper {
     @Mapping(source = "faction.name", target = "faction")
     @Mapping(source = "realm.name", target = "realm")
     @Mapping(source = "createdTimestamp", target = "created")
+    @Mapping(target = "crest", ignore = true)
     GuildInfo convert(Guild guild);
 
 }

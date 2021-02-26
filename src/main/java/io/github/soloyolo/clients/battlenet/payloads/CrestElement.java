@@ -3,10 +3,10 @@ package io.github.soloyolo.clients.battlenet.payloads;
 import lombok.Data;
 
 @Data
-public class Color {
+public class CrestElement {
 
+    Color color;
     int id;
-    Rgba rgba;
+    Media media;
 
 }
-

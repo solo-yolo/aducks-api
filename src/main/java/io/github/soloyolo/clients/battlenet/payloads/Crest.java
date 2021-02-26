@@ -11,11 +11,3 @@ public class Crest {
 
 }
 
-@Data
-class CrestElement {
-
-    Color color;
-    int id;
-    Media media;
-
-}
