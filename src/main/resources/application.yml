@@ -20,8 +20,8 @@ logging:
 clients:
   battlenet-oauth:
     url: https://eu.battle.net/oauth
-    clientId: ${BATTLENET_OAUTH_CLIENT_ID}
-    clientSecret: ${BATTLENET_OAUTH_CLIENT_SECRET}
+    clientId: ${BATTLENET_OAUTH_CLIENT_ID:''}
+    clientSecret: ${BATTLENET_OAUTH_CLIENT_SECRET:''}
   battlenet-client:
     url: https://eu.api.blizzard.com
 

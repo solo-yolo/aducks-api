@@ -1,7 +1,7 @@
 package io.github.soloyolo.clients.battlenet;
 
-import feign.Logger;
 import feign.RequestInterceptor;
+import io.github.soloyolo.clients.battlenet.payloads.Guild;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface BattlenetClient {
 
     @GetMapping("/data/wow/guild/{realm}/{name}")
-    Object getGuildInfo(
-            @PathVariable("realm") String realm, @PathVariable("name") String name, @RequestHeader("Battlenet-Namespace") String namespace);
+    Guild getGuildInfo(
+            @PathVariable("realm") String realm, @PathVariable("name") String name,
+            @RequestHeader("Battlenet-Namespace") String namespace);
 
 
     class Config {
